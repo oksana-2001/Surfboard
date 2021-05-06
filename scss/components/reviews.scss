@@ -9,11 +9,22 @@
 
 .reviews__display-inner{
 	display: flex;
+
+	@include tablets{
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	}
 }
 
 .reviews__avatar{
 	width: 15.8rem;
 	height: 16.5rem;
+
+	@include tablets{
+		width: 8rem;
+		height: 8rem;
+	}
 }
 
 .reviews__avatar-img{

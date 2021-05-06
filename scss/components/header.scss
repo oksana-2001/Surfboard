@@ -1,11 +1,13 @@
 .header{
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-between;
 
 	@include tablets{
 		background: #1968B1;
 		height: 5.7rem;
+		display: flex;
+		justify-content: space-between;
 		
 	
 }
@@ -29,3 +31,10 @@
 		display: none;
 	}
 }
+ .phone-namber__txt{
+	 white-space: nowrap;
+ }
+
+ .phone-namber__icon{
+	 flex-shrink: 0;
+ }

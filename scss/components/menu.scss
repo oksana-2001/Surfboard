@@ -1,7 +1,8 @@
 .menu{
 	@include tablets{
 		display: none;
-		
+		margin: 0 1.9rem;
+		padding-top: 0.3rem;
 
 	}
 }
@@ -9,10 +10,13 @@
 .menu__list{
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .menu__item{
 	margin-right: 1.4rem;
+	margin-bottom: 0.6rem;
 
 	&:last-child{
 		margin-right: 0;

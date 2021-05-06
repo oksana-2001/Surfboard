@@ -2,6 +2,7 @@
 	align-items: center;
 	text-align: center;
 	font-size: 1.1rem;
+	margin-bottom: 3.2rem;
 }
 
 .headline__title{
@@ -10,4 +11,8 @@
 
 .headline__subtitle{
 	padding: 0 27%;
+
+	@include phones{
+		padding: 0 5%;
+	}
 }
