@@ -2,14 +2,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-}
 
-.phone-namber .header__phone-namber{
 	@include tablets{
-		display: none;
-	}
+		background: #1968B1;
+		height: 5.7rem;
+		
+	
 }
-
+}
 
 .phone-namber{
 	font-size: 1.4rem;
@@ -22,4 +22,10 @@
 	width: 0.8rem;
 	height: 1.4rem;
 	margin-right: 0.9rem;
+}
+
+.phone-namber.header__phone-namber{
+	@include tablets{
+		display: none;
+	}
 }

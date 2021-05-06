@@ -1,6 +1,8 @@
 .menu{
 	@include tablets{
 		display: none;
+		
+
 	}
 }
 
@@ -19,4 +21,5 @@
 
 .menu__link{
 	text-decoration: none;
+	white-space: nowrap;
 }

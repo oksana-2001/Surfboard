@@ -82,10 +82,8 @@ p {
   background: url("./../img/ocean.png") top center no-repeat;
   color: #fff;
   background-size: cover;
-}
-
-.hero__title-section {
-  width: 46%;
+  height: 100vh;
+  min-height: 41rem;
 }
 
 .hero__container {
@@ -97,19 +95,44 @@ p {
   width: 100%;
   background-size: cover;
 }
+@media screen and (max-width: 768px) {
+  .hero__container {
+    padding: 0;
+  }
+}
 
 .hero__main-title {
   font-size: 3rem;
   line-height: 1.1;
   font-weight: bold;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0;
   text-transform: uppercase;
+}
+
+.hero__title-section {
+  width: 46%;
+}
+@media screen and (max-width: 768px) {
+  .hero__title-section {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .hero__title-desc {
   font-size: 1.3rem;
   margin-bottom: 2.4rem;
   padding-right: 10%;
+}
+@media screen and (max-width: 768px) {
+  .hero__title-desc {
+    padding: 0 25%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -123,10 +146,10 @@ p {
   align-items: center;
   justify-content: space-between;
 }
-
 @media screen and (max-width: 768px) {
-  .phone-namber .header__phone-namber {
-    display: none;
+  .header {
+    background: #1968B1;
+    height: 5.7rem;
   }
 }
 
@@ -141,6 +164,12 @@ p {
   width: 0.8rem;
   height: 1.4rem;
   margin-right: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+  .phone-namber.header__phone-namber {
+    display: none;
+  }
 }
 
 .bullets {
@@ -532,6 +561,29 @@ p {
   transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  margin-right: 1.4rem;
+}
+.menu__item:last-child {
+  margin-right: 0;
+}
+
+.menu__link {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 .map-section {
   display: flex;
   position: relative;
@@ -547,4 +599,24 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.hamburger {
+  width: 1.5rem;
+  height: 1.25rem;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: inline-flex;
+  }
+}
+
+.hamburger__plank {
+  display: block;
+  background: #FFF;
+  height: 4px;
+  border-radius: 10px;
 }
