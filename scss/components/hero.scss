@@ -2,11 +2,12 @@
   background: url("./../img/ocean.png") top center no-repeat;
   color: #fff;
   background-size: cover;
+  height: 100vh;
+  min-height: 41rem;
 }
+ 
 
-.hero__title-section {
-  width: 46%;
-}
+
 
 .hero__container {
   display: flex;
@@ -16,20 +17,42 @@
   padding: 1.5rem 0 4rem;
   width: 100%;
   background-size: cover;
+
+  @include tablets{
+    padding: 0;
+  }
+
 }
 
 .hero__main-title {
   font-size: 3rem;
   line-height: 1.1;
   font-weight: bold;
-  margin-bottom: 1.1rem;
+  margin-bottom:0;
   text-transform: uppercase;
+}
+
+.hero__title-section {
+  width: 46%;
+  
+  @include tablets{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .hero__title-desc {
   font-size: 1.3rem;
   margin-bottom: 2.4rem;
   padding-right: 10%;
+   @include tablets{
+     padding: 0 25%;
+   }
 }
 
 .hero__icon-section {
