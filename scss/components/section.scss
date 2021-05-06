@@ -1,0 +1,36 @@
+.section {
+  height: 100vh;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 37.5rem;
+
+
+  &__title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.3rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #292929;
+
+  &-form{
+ color: #FFFFFF;
+ 
+  }
+}
+}
+
+.section-overlay{
+  position: relative;
+
+&::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ 
+ background: rgb(0 0 0 / 30%);
+  }
+}

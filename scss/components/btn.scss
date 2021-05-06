@@ -1,0 +1,39 @@
+.btn{
+	font-size: 1rem;
+	font-weight: 800;
+	padding: 1.3rem 2.6rem;
+	text-transform: uppercase;
+	border-radius: 6.25rem;
+	line-height: 1;
+	text-decoration: none;
+	display: inline-block;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	&--threme--yellow{
+		background: #FEDB3F;
+		color: #000;
+		margin-bottom: 4rem;
+	
+	&:hover{
+		background: #FFD517;
+
+		color: #000;
+	}
+	}
+
+	&--threme--trasparant{
+		background: transparent;
+		color: #FFFFFF;
+		font-weight: 400;
+		text-transform: none;
+	&:hover{
+		 background: #00000080;
+		 opacity: 50%;
+	
+		color: #FEDB3F;
+
+	}
+	}
+}

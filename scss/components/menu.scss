@@ -1,0 +1,22 @@
+.menu{
+	@include tablets{
+		display: none;
+	}
+}
+
+.menu__list{
+	display: flex;
+	align-items: center;
+}
+
+.menu__item{
+	margin-right: 1.4rem;
+
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.menu__link{
+	text-decoration: none;
+}
