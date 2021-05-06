@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .menu{
 	@include tablets{
 		display: none;
@@ -27,3 +28,30 @@
 	text-decoration: none;
 	white-space: nowrap;
 }
+=======
+.menu{
+	@include tablets{
+		display: none;
+		
+
+	}
+}
+
+.menu__list{
+	display: flex;
+	align-items: center;
+}
+
+.menu__item{
+	margin-right: 1.4rem;
+
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.menu__link{
+	text-decoration: none;
+	white-space: nowrap;
+}
+>>>>>>> 8fe85ff6ff660e57a0e2d11236b3fd37fabcb935

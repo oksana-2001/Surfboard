@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .header{
 	display: flex;
 	align-items: flex-start;
@@ -38,3 +39,36 @@
  .phone-namber__icon{
 	 flex-shrink: 0;
  }
+=======
+.header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include tablets{
+		background: #1968B1;
+		height: 5.7rem;
+		
+	
+}
+}
+
+.phone-namber{
+	font-size: 1.4rem;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+}
+
+.phone-namber__icon-elem{
+	width: 0.8rem;
+	height: 1.4rem;
+	margin-right: 0.9rem;
+}
+
+.phone-namber.header__phone-namber{
+	@include tablets{
+		display: none;
+	}
+}
+>>>>>>> 8fe85ff6ff660e57a0e2d11236b3fd37fabcb935
