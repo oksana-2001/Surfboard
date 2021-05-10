@@ -1,29 +1,28 @@
-.menu{
-	@include tablets{
-		display: none;
-		margin: 0 1.9rem;
-		padding-top: 0.3rem;
-
-	}
+.menu {
+  @include tablets {
+    display: none;
+    margin: 0 1.9rem;
+    padding-top: 0.3rem;
+  }
 }
 
-.menu__list{
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	justify-content: space-between;
+.menu__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.menu__item{
-	margin-right: 1.4rem;
-	margin-bottom: 0.6rem;
+.menu__item {
+  margin-right: rem(22px);
+  margin-bottom: rem(10px);
 
-	&:last-child{
-		margin-right: 0;
-	}
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
-.menu__link{
-	text-decoration: none;
-	white-space: nowrap;
+.menu__link {
+  text-decoration: none;
+  white-space: nowrap;
 }

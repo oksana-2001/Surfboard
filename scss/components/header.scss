@@ -1,40 +1,43 @@
-.header{
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: rem(90px);
 
-	@include tablets{
-		background: #1968B1;
-		height: 5.7rem;
-		display: flex;
-		justify-content: space-between;
-		
-	
-}
-}
-
-.phone-namber{
-	font-size: 1.4rem;
-	text-decoration: none;
-	display: flex;
-	align-items: center;
+  @include tablets {
+    background: #1968b1;
+    height: rem(91px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 rem(8px);
+  }
 }
 
-.phone-namber__icon-elem{
-	width: 0.8rem;
-	height: 1.4rem;
-	margin-right: 0.9rem;
+.phone-namber {
+  font-size: rem(22px);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
-.phone-namber.header__phone-namber{
-	@include tablets{
-		display: none;
-	}
+.phone-namber__icon-elem {
+  width: rem(13px);
+  height: rem(22px);
+  margin-right: rem(14px);
+  display: flex;
+  align-items: center;
 }
- .phone-namber__txt{
-	 white-space: nowrap;
- }
 
- .phone-namber__icon{
-	 flex-shrink: 0;
- }
+.phone-namber.header__phone-namber {
+  @include tablets {
+    display: none;
+  }
+}
+.phone-namber__txt {
+  white-space: nowrap;
+}
+
+.phone-namber__icon {
+  flex-shrink: 0;
+}

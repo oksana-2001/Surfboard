@@ -1,11 +1,11 @@
-html{
+html {
   font-size: $baseFontSize;
 
-  @include tablets{
+  @include tablets {
     font-size: $baseFontSize - 1px;
   }
 
-  @include phones{
+  @include phones {
     font-size: $baseFontSize - 2px;
   }
 }
@@ -30,11 +30,9 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
-  
+
   min-height: 100%;
 }
-
-
 
 .container {
   width: 95%;

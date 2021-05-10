@@ -1,40 +1,39 @@
-.btn{
-	font-size: 1rem;
-	font-weight: 800;
-	padding: 1.3rem 2.6rem;
-	text-transform: uppercase;
-	border-radius: 6.25rem;
-	line-height: 1;
-	text-decoration: none;
-	display: inline-block;
-	border: none;
-	cursor: pointer;
-	transition: background-color 0.3s;
+.btn {
+  font-size: rem(16px);
+  font-weight: 800;
+  padding: rem(22px) rem(42px);
+  text-transform: uppercase;
+  border-radius: rem(100px);
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 
-	&--threme--yellow{
-		background: #FEDB3F;
-		color: #000;
-		margin-bottom: 4rem;
-	
-	&:hover{
-		background: #FFD517;
+  &--threme--yellow {
+    background: #fedb3f;
+    color: #000;
+    margin-bottom: rem(64px);
 
-		color: #000;
-	}
-	}
+    &:hover {
+      background: #ffd517;
 
-	&--threme--trasparant{
-		background: transparent;
-		color: #FFFFFF;
-		font-weight: 400;
-		text-transform: none;
-		margin-bottom: 4rem;
-	&:hover{
-		 background: #00000080;
-		 opacity: 50%;
-	
-		color: #FEDB3F;
+      color: #000;
+    }
+  }
 
-	}
-	}
+  &--threme--trasparant {
+    background: transparent;
+    color: #ffffff;
+    font-weight: 400;
+    text-transform: none;
+    margin-bottom: rem(64px);
+    &:hover {
+      background: #00000080;
+      opacity: 50%;
+
+      color: #fedb3f;
+    }
+  }
 }

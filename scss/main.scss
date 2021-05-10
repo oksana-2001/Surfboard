@@ -1,13 +1,12 @@
 $containerWidht: 940px;
-$baseFontSize: 16px;
+$baseFontSize: 18px;
 
-$z-fixed-menu:100;
+$z-fixed-menu: 100;
 
-$tablets:768px;
-$phones:480px;
+$tablets: 768px;
+$phones: 480px;
 
-
-@import "components/media";
+@import "media";
 
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 
@@ -34,3 +33,4 @@ $phones:480px;
 @import "components/map";
 @import "components/footer";
 @import "components/hamburger";
+@import "components/socials";

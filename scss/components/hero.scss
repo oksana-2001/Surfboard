@@ -3,39 +3,35 @@
   color: #fff;
   background-size: cover;
   height: 100vh;
-  min-height: 41rem;
+  min-height: rem(656px);
 }
- 
-
-
 
 .hero__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 1.5rem 0 4rem;
+  padding: rem(24px) 0 rem(64px);
   width: 100%;
   background-size: cover;
 
-  @include tablets{
+  @include tablets {
     padding: 0;
   }
-
 }
 
 .hero__main-title {
-  font-size: 3rem;
-  line-height: 1.1;
+  font-size: rem(48px);
+  line-height: 1;
   font-weight: bold;
-  margin-bottom:0;
+  margin-bottom: rem(30px);
   text-transform: uppercase;
 }
 
 .hero__title-section {
   width: 46%;
-  
-  @include tablets{
+
+  @include tablets {
     width: 100%;
     flex: 1;
     display: flex;
@@ -47,16 +43,17 @@
 }
 
 .hero__title-desc {
-  font-size: 1.3rem;
-  margin-bottom: 2.4rem;
+  font-size: rem(21px);
+
+  margin-bottom: rem(50px);
   padding-right: 10%;
-   @include tablets{
-     padding: 0 25%;
-   }
+  @include tablets {
+    padding: 0 25%;
+  }
 }
 
 .hero__icon-section {
- @include tablets{
-   display: none;
- }
+  @include tablets {
+    display: none;
+  }
 }
