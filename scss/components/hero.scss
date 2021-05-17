@@ -26,6 +26,10 @@
   font-weight: bold;
   margin-bottom: rem(30px);
   text-transform: uppercase;
+
+  @include phones{
+    font-size: rem(40px);
+  }
 }
 
 .hero__title-section {
@@ -47,12 +51,14 @@
 
   margin-bottom: rem(50px);
   padding-right: 10%;
+
   @include tablets {
     padding: 0 25%;
   }
 }
 
 .hero__icon-section {
+
   @include tablets {
     display: none;
   }

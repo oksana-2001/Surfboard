@@ -14,7 +14,12 @@
     color: #292929;
 
     &-form {
+     margin-top: rem(60px);
       color: #ffffff;
+
+      background-size: cover{
+        font-size: rem(40px);
+      }
     }
   }
 }

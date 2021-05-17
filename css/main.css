@@ -108,6 +108,11 @@ p {
   margin-bottom: 1.6666666667rem;
   text-transform: uppercase;
 }
+@media screen and (max-width: 480px) {
+  .hero__main-title {
+    font-size: 2.2222222222rem;
+  }
+}
 
 .hero__title-section {
   width: 46%;
@@ -266,7 +271,10 @@ p {
   color: #292929;
 }
 .section__title-form {
+  margin-top: 3.3333333333rem;
   color: #ffffff;
+  background-size: cover;
+  background-size-font-size: 2.2222222222rem;
 }
 
 .section-overlay {
@@ -534,7 +542,7 @@ p {
 }
 .form__imput--textarea {
   height: 8.4444444444rem;
-  width: 25rem;
+  max-width: 25rem;
   margin-bottom: 1.4444444444rem;
 }
 .form__imput:focus {
@@ -553,6 +561,12 @@ p {
   background: url("./../img/wave.jpg");
   color: #FFFFFF;
   background-size: cover;
+}
+@media screen and (max-width: 480px) {
+  .order-section {
+    background: url("./../img/wave.jpg");
+    background-size: cover;
+  }
 }
 
 .form__controls {
@@ -689,7 +703,7 @@ p {
 .map-section {
   display: flex;
   position: relative;
-  background: url(./../img/map.png);
+  background: url(./../img/map.jpg) center center no-repeat;
 }
 
 .footer {
@@ -768,4 +782,26 @@ p {
 }
 .socials__icon:hover {
   fill: #292929;
+}
+
+.product__parameters-longboard-active {
+  position: relative;
+  display: none;
+}
+.product__parameters-longboard-active:hover {
+  display: block;
+}
+
+.product__col {
+  display: inline-block;
+}
+
+.product__parameters {
+  max-width: 15.1666666667rem;
+  max-height: 16.1666666667rem;
+}
+
+.product__parameters-icon-line {
+  display: flex;
+  margin-bottom: 0.2033333333rem;
 }

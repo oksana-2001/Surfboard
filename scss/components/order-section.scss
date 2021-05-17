@@ -2,4 +2,11 @@
   background: url("./../img/wave.jpg");
   color: #FFFFFF;
   background-size: cover;
+
+  @include phones{
+    background: url("./../img/wave.jpg");
+    background-size: cover;
+  }
+  
+  
 }

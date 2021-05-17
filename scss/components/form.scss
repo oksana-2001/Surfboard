@@ -47,7 +47,7 @@
 
   &--textarea {
     height: rem(152px);
-    width: rem(450px);
+    max-width: rem(450px);
     margin-bottom: rem(26px);
   }
 

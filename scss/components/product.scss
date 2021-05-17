@@ -1,0 +1,24 @@
+.product__parameters-longboard-active{
+	position: relative;
+	display: none;
+	&:hover{
+		display: block;
+	}
+	
+}
+.product__col{
+	
+	display: inline-block;
+
+}
+
+.product__parameters{
+	max-width: rem(273px);
+	max-height: rem(291px);
+	
+}
+
+.product__parameters-icon-line{
+	display: flex;
+	margin-bottom: rem(3.66px);
+}
