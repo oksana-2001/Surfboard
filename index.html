@@ -63,6 +63,9 @@
                 <span class="hamburger__plank"></span>
                 <span class="hamburger__plank"></span>
               </a>
+              <a href="" class="menu__close">
+                <span class="menu__close-cross"></span>
+              </a>
             </header>
             <div class="hero__title-section">
               <h1 class="hero__main-title">
@@ -187,7 +190,8 @@
           <div class="container">
             <div class="products-slider">
               <div class="products-slider__arrows">
-                <a href="#" class="products-slider__arrows products-slider__arrows--direction--prev"></a>
+                <a href="#" class="products-slider__arrows products-slider__arrows--direction--prev">
+                </a>
                 <a href="#" class="products-slider__arrows products-slider__arrows--direction--next"></a>
               </div>
             
@@ -208,13 +212,9 @@
               />
              
             </div>
-            <div class="product__col">
-              <div class="-icon">
-                <img
-                src="./img/parameters 2.png"
-                alt=""
-                class="product__parameters-img "
-              />
+            <div class="product__col-left">
+              <div class="product__parameters-icon">
+               
               <img
               src="./img/parameters.svg"
               alt=""
@@ -223,11 +223,11 @@
             <div class="product__parameters-title">параметры</div>
             </div>
             <div class="product__parameters ">
-              <div class="product__parameters-longboard-active">
+              <div class="product__parameters-dropdown">
                 <img
                   src="./img/length.svg"
                   alt="arrow"
-                  class="product__parameters-icon"
+                  class="product__parameters-img"
                 />
                 <div class="product__parameters-text">Длина доски</div>
                 <div class="product__parameters-text">от 2,5 м</div>
@@ -236,7 +236,7 @@
                 <img
                   src="./img/width.svg"
                   alt="arrow"
-                  class="product__parameters-icon"
+                  class="product__parameters-img"
                 />
                 <div class="product__parameters-text">Ширина доски</div>
                 <div class="product__parameters-text">от 40 см</div>
@@ -268,7 +268,7 @@
                   <img
                     src="./img/hourglass.svg"
                     alt="hourglass"
-                    class="product__parameters-icon"
+                    class="product__parameters-img"
                   />
                   <div class="product__parameters-text">Срок службы</div>
                   <div class="product__parameters-text">5 лет</div>
@@ -277,7 +277,7 @@
                   <img
                     src="./img/weight.svg"
                     alt="weight"
-                    class="product__parameters-icon"
+                    class="product__parameters-img"
                   />
                   <div class="product__parameters-text">Вес</div>
                   <div class="product__parameters-text">7-8 кг</div>
@@ -286,28 +286,42 @@
             </div>
             </div>
              
-              <div class="product__title">Лонгборд 2.0</div>
+              <div class="section__title section__title-product">Лонгборд 2.0</div>
               <div class="product__txt">
-                <p>Самые быстрые доски для профессионалов.
-                   Размеры шортбордов позволяют быстро
-                    набирать скорость, делать различные 
-                    трюки на волне, включая резкие повороты 
-                    и развороты, флоатеры (проезды по самому
-                     гребню волны), различные прыжки с
-                      вращениями или без, а также катание 
-                  в трубах.
+                <p>Устойчивая доска для новичков. 
+                  На них легко лежать, сидеть, грести,
+                   разгребаться на волны и ехать. Размер и
+                    плавучесть доски позволяет брать очень 
+                    маленькие и пологие волны и не спеша,
+                    не прилагая особых усилий ехать по ним.
+
                   </p>
               </div>
-            </div>
-            <div class="product__parameters-text">Длина доски</div>
-                  <div class="product__parameters-text">от 2,5 метров</div>
-                  <div class="product__parameters-text">Ширина доски</div>
-                  <div class="product__parameters-text">от 40 сантиметров</div>
-                  <div class="product__parameters-price">7000 ₽</div>
-            <a href="#" class="btn btn--threme--yellow">ЗАКАЗАТЬ</a>
+           <div class="product__info">
+             <ul class="product__info-list">
+            <li class="product__info-text">Длина доски</li>
+                  <li class="product__info-text-bold">от 2,5 метров</li>
+                  </ul>
+                  <ul class=" product__info-list">
+                  <li class="product__info-text">Ширина доски</li>
+                  <li class="product__info-text-bold">от 40 сантиметров</li>
+                </ul>
+                </div>
+                  <div class="product__praces">
+                  <div class="product__price">7000 ₽</div>
+                  <div class="product__btns">
+                    <button
+                      type="submit"
+                      value="Заказать"
+                      class="btn btn--threme--yellow"
+                    >
+                      Заказать
+                    </button>
           </div>
+        </div>
         </div> 
       </div>
+    </div>
             </ul>
           </div>
         </div>
@@ -561,5 +575,6 @@
         </li>
       </ul>
     </nav>
+    <script src="./js/script.js"></script>
   </body>
 </html>

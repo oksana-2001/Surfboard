@@ -1,18 +1,56 @@
 .menu {
+  margin: 0 1.9rem;
+  padding-top: 0.3rem;
   @include tablets {
     display: none;
-    margin: 0 1.9rem;
-    padding-top: 0.3rem;
   }
+
+  &-opened{
+    @include tablets{
+    display: block;
+  }
+  position: fixed;
+  background-color:#000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  margin: 0;
+  & .menu__list{
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+ 
+  }
+ 
+
+
+& .menu__close{
+  
+    display: block;
+    width: rem(20px); 
+    height: rem(20px);
+  
+}
+  }
+
 }
 
-.menu__list {
+ .menu__list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+.menu__close-cross{
+  display: block;
+  background: url(./../../img/cross.svg);
+ 
+  width: rem(20px); 
+  height: rem(20px);
+}
 .menu__item {
   margin-right: rem(22px);
   margin-bottom: rem(10px);
