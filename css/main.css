@@ -450,6 +450,7 @@ p {
 
 .reviews__txt {
   margin-bottom: 1.4444444444rem;
+  max-width: 25.7222222222rem;
 }
 
 .reviews__autor {
@@ -941,19 +942,53 @@ p {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .team {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .section__title {
   margin-bottom: 2.9444444444rem;
 }
 
+.team__item {
+  margin-right: 1.1111111111rem;
+  position: relative;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .team__item {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team__item--active .team__member {
+    display: block;
+    overflow: hidden;
+  }
+}
+
 .team__member {
   width: 12.2222222222rem;
   height: 16.1111111111rem;
-  margin-right: 1.1111111111rem;
   margin-bottom: 1.1666666667rem;
 }
 .team__member:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .team__member {
+    width: auto;
+    margin-right: initial;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__member {
+    display: none;
+  }
 }
 
 .team__title {
@@ -966,11 +1001,20 @@ p {
   font-size: 1.1666666667rem;
   font-weight: bold;
   margin-bottom: 0.4444444444rem;
+  cursor: pointer;
+}
+.team__title::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  display: block;
+  background: url(./../../img/triangle.png) no-repeat;
+  transition: 0.3s;
+  margin-left: 0.2222222222rem;
 }
 
-.team--version--desktop .team__content {
-  position: absolute;
-  top: 100%;
+.team__item--active .team__title::after {
+  transform: rotate(180deg);
 }
 
 .team__content {
@@ -981,20 +1025,15 @@ p {
   overflow: hidden;
   transition: 0.3s;
   height: 0;
+  z-index: 1;
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  width: 100%;
 }
 
 .team__occ {
   font-size: 1rem;
   font-weight: bolder;
   margin-bottom: 0.2222222222rem;
-}
-
-.team--version--mobile {
-  display: none;
-}
-@media screen and (max-width: 480px) {
-  .team--version--mobile {
-    display: flex;
-    flex-direction: column;
-  }
 }

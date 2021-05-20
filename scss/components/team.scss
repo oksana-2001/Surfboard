@@ -1,65 +1,104 @@
-.team{
-	display: flex;
-	justify-content: space-between;
-}
+.team {
+  display: flex;
+  justify-content: space-between;
 
-.section__title{
-	margin-bottom: rem(53px);
-}
-
-.team__member{
-	width: rem(220px);
-	height: rem(290px);
-	margin-right: rem(20px);
-	margin-bottom: rem(21px);
-
-	&:last-child{
-		margin-right: 0;
-	}
-}
-
-.team__title{
-	color: #292929;
-    display: inline-flex;
+  @include tablets {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-	background: none;
-	border: transparent;
-	font-size: rem(21px);
-	font-weight: bold;
-	margin-bottom: rem(8px);
-
-
+  }
 }
 
-.team--version--desktop .team__content{
-	position: absolute;
-	top: 100%;
-	
+.section__title {
+  margin-bottom: rem(53px);
 }
 
-.team__content{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	overflow: hidden;
-	transition: .3s;
-	height: 0;
+.team__item {
+  margin-right: rem(20px);
+  position: relative;
+  text-align: center;
+  @include tablets {
+    margin-right: 0;
+  }
+}
+.team__item--active {
+  & .team__member {
+    @include phones {
+      display: block;
+      overflow: hidden;
+    }
+  }
 }
 
-.team__occ{
-	font-size: rem(18px);
-	font-weight: bolder;
-	margin-bottom: rem(4px);
+.team__member {
+  width: rem(220px);
+  height: rem(290px);
+  margin-bottom: rem(21px);
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+	 
+    width: auto;
+    margin-right: initial;
+  }
+
+  @include phones {
+    display: none;
+  }
 }
 
-.team--version--mobile{
-	display: none;
+.team__title {
+  color: #292929;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: transparent;
+  font-size: rem(21px);
+  font-weight: bold;
+  margin-bottom: rem(8px);
+  cursor: pointer;
 
-	@include phones{
-		
-		display: flex;
-		flex-direction: column;
-	}
+  &::after { 
+	content: "";
+	width: rem(9px);
+	height: rem(9px);
+	display: block;
+	background:url(./../../img/triangle.png)no-repeat;
+	transition: 0.3s;
+	margin-left:rem(4px);
+
+
+  }
 }
+
+.team__item--active .team__title::after{
+	transform: rotate(180deg);
+}
+
+.team__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.3s;
+  height: 0;
+  z-index: 1;
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  
+  
+}
+
+.team__occ {
+  font-size: rem(18px);
+  font-weight: bolder;
+  margin-bottom: rem(4px);
+}
+
+
+
