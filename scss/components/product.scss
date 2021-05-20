@@ -18,8 +18,6 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 
-
-
 }
 .product__col-img{
 	position: relative;
@@ -53,7 +51,7 @@ justify-content: space-between;
 	margin-left: rem(68px);
 	align-items: flex-start;
 }
-.product__parameters-icon{
+.product__icon{
 	width: rem(91px);
 	height: rem(91px);
 	background: #3A587E;
@@ -77,7 +75,7 @@ justify-content: space-between;
 
 }
 
-.product__parameters-title{
+.product__title{
 	color: #FFFFFF;
 
 }

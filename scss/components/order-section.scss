@@ -1,10 +1,10 @@
 .order-section {
-  background: url("./../img/wave.jpg");
+  background: url("./../img/wave.jpg")center;
   color: #FFFFFF;
   background-size: cover;
 
   @include phones{
-    background: url("./../img/wave.jpg");
+    background: url("./../img/wave.jpg")center;
     background-size: cover;
   }
   

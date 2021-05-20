@@ -1,13 +1,13 @@
 .hamburger {
-  width: rem(24px);
-  height: rem(20px);
+  width: rem(26px);
+  height: rem(4px);
 
   flex-direction: column;
-  justify-content: space-between;
+  
   display: none;
 
   @include tablets {
-    display: inline-flex;
+    display: block;
   }
 }
 
@@ -16,4 +16,5 @@
   background: #fff;
   height: rem(4px);
   border-radius: rem(10px);
+  margin-bottom: rem(5.42px);
 }
