@@ -22,9 +22,12 @@
 }
 .team__item--active {
   & .team__member {
-    @include phones {
+    @include tablets {
+      
       display: block;
       overflow: hidden;
+      width: auto;
+    margin-right: initial;
     }
   }
 }
@@ -38,14 +41,11 @@
   }
 
   @include tablets {
-	 
-    width: auto;
-    margin-right: initial;
+    display: none;
+    
   }
 
-  @include phones {
-    display: none;
-  }
+  
 }
 
 .team__title {
@@ -87,11 +87,17 @@
   height: 0;
   z-index: 1;
   background: #fff;
-  position: absolute;
+  
   top: 100%;
   width: 100%;
   
   
+}
+
+.team__content-text{
+  @include tablets {
+    max-width: rem(259px);
+  }
 }
 
 .team__occ {
@@ -99,6 +105,4 @@
   font-weight: bolder;
   margin-bottom: rem(4px);
 }
-
-
 

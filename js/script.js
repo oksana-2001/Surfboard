@@ -36,7 +36,7 @@ const openItem = (item) => {
 	const container = item.closest(".team__item");
 	const contentBlock = container.find(".team__content");
 	const textBlock = contentBlock.find(".team__content-block");
-	const reqHeight = textBlock.height();
+    const reqHeight = textBlock.height();
 
 	container.addClass('active');
 	contentBlock.height(reqHeight);

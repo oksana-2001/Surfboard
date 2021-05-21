@@ -964,10 +964,12 @@ p {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .team__item--active .team__member {
     display: block;
     overflow: hidden;
+    width: auto;
+    margin-right: initial;
   }
 }
 
@@ -980,12 +982,6 @@ p {
   margin-right: 0;
 }
 @media screen and (max-width: 768px) {
-  .team__member {
-    width: auto;
-    margin-right: initial;
-  }
-}
-@media screen and (max-width: 480px) {
   .team__member {
     display: none;
   }
@@ -1008,7 +1004,7 @@ p {
   width: 0.5rem;
   height: 0.5rem;
   display: block;
-  background: url(./../../img/triangle.png) no-repeat;
+  background: url(./../img/triangle.png) no-repeat;
   transition: 0.3s;
   margin-left: 0.2222222222rem;
 }
@@ -1027,9 +1023,14 @@ p {
   height: 0;
   z-index: 1;
   background: #fff;
-  position: absolute;
   top: 100%;
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .team__content-text {
+    max-width: 14.3888888889rem;
+  }
 }
 
 .team__occ {
