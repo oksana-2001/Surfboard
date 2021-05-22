@@ -297,7 +297,7 @@ p {
 }
 
 .headline__title {
-  margin-bottom: 1rem;
+  margin-bottom: 0.1111111111rem;
 }
 
 .headline__subtitle {
@@ -823,17 +823,58 @@ p {
   fill: #292929;
 }
 
+.products-slider__arrows-wrap {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .products-slider__arrows {
   display: flex;
   flex-direction: column;
+  background-image: url(./../img/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 1.3333333333rem;
+  height: 2.2222222222rem;
+  position: absolute;
+}
+
+.products-slider__arrows--direction--prev {
+  left: -1.6666666667rem;
+  transform: rotate(180deg);
+}
+@media screen and (max-width: 768px) {
+  .products-slider__arrows--direction--prev {
+    left: 0;
+  }
+}
+
+.products-slider__arrows--direction--next {
+  right: -1.6666666667rem;
+}
+@media screen and (max-width: 768px) {
+  .products-slider__arrows--direction--next {
+    right: 0;
+  }
 }
 
 .product__parameters-dropdown {
-  position: relative;
-  display: none;
-}
-.product__parameters-dropdown:hover {
-  display: inline-block;
+  position: absolute;
+  width: 15.1666666667rem;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border-radius: 0.2222222222rem;
+  padding: 1.5555555556rem;
+  top: 0;
+  left: -5555.5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.8888888889rem;
 }
 
 .product__col {
@@ -849,46 +890,83 @@ p {
   display: flex;
 }
 
+.product__col-image {
+  background-image: url("./../img/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: 3.8333333333rem;
+}
+
+.product__parameters-img {
+  margin-right: 0.8333333333rem;
+  width: 1.7777777778rem;
+  height: 1.7777777778rem;
+  display: block;
+}
+
+.product__parameters-text {
+  margin-right: 0.2777777778rem;
+}
+.product__parameters-text:last-child {
+  margin-left: auto;
+  margin-right: 0;
+  white-space: nowrap;
+}
+
 .product__col-img-board {
-  position: absolute;
   margin-top: 2.9238888889rem;
-  top: 0;
-  left: 0;
 }
 
 .product__container {
   display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .product__container {
+    flex-direction: column;
+  }
 }
 
 .product__parameters {
-  max-width: 15.1666666667rem;
-  max-height: 16.1666666667rem;
+  display: flex;
+  margin-bottom: 1.1111111111rem;
+  align-items: center;
+  text-align: center;
 }
 
-.product__col-left {
+.product__col--right {
+  display: flex;
+  flex-direction: column;
   margin-top: 3.6666666667rem;
-  margin-left: 3.7777777778rem;
+  margin-left: 4.6666666667rem;
   align-items: flex-start;
 }
 
 .product__icon {
   width: 5.0555555556rem;
   height: 5.0555555556rem;
-  background: #3A587E;
+  background: #3a587e;
   border-radius: 0.2222222222rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 2.8888888889rem;
+  position: relative;
 }
-.product__icon:hover ~ .product__parameters .product__parameters-dropdown {
-  display: inline-block;
-  transition: 0.3s;
+@media screen and (max-width: 768px) {
+  .product__icon {
+    display: none;
+  }
+}
+.product__icon:hover .product__parameters-dropdown {
+  left: 100%;
+  opacity: 1;
 }
 
 .product__title {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .product__parameters-icon-line {
@@ -902,6 +980,8 @@ p {
 
 .product__txt {
   margin-bottom: 1.3333333333rem;
+  text-align: start;
+  margin-right: 1.8888888889rem;
 }
 
 .product__info {
@@ -937,6 +1017,11 @@ p {
   margin-right: 1.5555555556rem;
   color: #151515;
 }
+@media screen and (max-width: 768px) {
+  .product__price {
+    font-size: 2.7777777778rem;
+  }
+}
 
 .team {
   display: flex;
@@ -954,6 +1039,8 @@ p {
 }
 
 .team__item {
+  display: flex;
+  flex-direction: column;
   margin-right: 1.1111111111rem;
   position: relative;
   text-align: center;
@@ -965,11 +1052,18 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  .team__item--active .team__member {
+  .team__item.active .team__content {
+    order: 6;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .team__item.active .team__member {
     display: block;
     overflow: hidden;
     width: auto;
     margin-right: initial;
+    order: 1;
   }
 }
 

@@ -13,21 +13,33 @@
 }
 
 .team__item {
+  display: flex;
+  flex-direction: column;
   margin-right: rem(20px);
   position: relative;
   text-align: center;
   @include tablets {
     margin-right: 0;
+   
+    
   }
 }
-.team__item--active {
+
+.team__item.active{
+& .team__content{
+  @include tablets {
+   order: 6;
+  }
+}
+}
+.team__item.active{
   & .team__member {
     @include tablets {
-      
       display: block;
       overflow: hidden;
       width: auto;
     margin-right: initial;
+    order: 1;
     }
   }
 }
