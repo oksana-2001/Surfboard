@@ -15,7 +15,7 @@
 	 }
 	 
 	 .modal__container{
-		 background: #fff;
+		 background:#fff;
 		 padding: rem(35px) rem(60px);
 		 display: flex;
 		 flex-direction: column;
@@ -25,4 +25,8 @@
 	 .modal__content{
 		 margin-bottom: rem(15px);
 		 color: #000;
+	 }
+	 
+	 .modal__error{
+		 color: red;
 	 }

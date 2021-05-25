@@ -1,3 +1,6 @@
+.modal {
+  display: none;
+}
 .modal.error-modal .modal__content {
   color: red;
 }
@@ -19,4 +22,8 @@
 .modal__content {
   margin-bottom: rem(15px);
   color: #000;
+}
+
+.modal__error {
+  color: red;
 }

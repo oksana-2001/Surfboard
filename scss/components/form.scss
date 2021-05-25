@@ -38,12 +38,13 @@
   }
 }
 
-.form__imput {
+.form__input {
   width: 100%;
   border: none;
   padding: rem(18px) rem(18px);
   border: solid rem(3px) transparent;
   border-radius: rem(5px);
+  
 
   &--textarea {
     height: rem(152px);
@@ -62,4 +63,8 @@
     display: flex;
     justify-content: center;
   }
+}
+
+.input-error{
+  border-color: red;
 }

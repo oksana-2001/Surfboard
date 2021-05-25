@@ -10,9 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <title>Surfboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
-      />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -214,7 +212,7 @@
                         class="product__col-img-board"/>
 
                     </div>
-                    <div class="product__col--right">
+                    <div class="product__col product__col--right">
                       <div class="product__icon">
 
                         <img
@@ -599,29 +597,83 @@
             <h2 class="section__title">отзывы</h2>
             <div class="reviews">
               <div class="reviews__display">
-                <div class="reviews__display-inner">
-                  <div class="reviews__avatar">
-                    <img
-                      src="img/woman.png"
-                      alt=""
-                      class="reviews__avatar-img"
-                      />
-                  </div>
-                  <article class="reviews__content">
-                    <div class="reviews__title">Лучший дизайн</div>
-                    <div class="reviews__txt">
-                      <p>
-                        Я увидела доски на сайте и влюбилась в их дизайн. К
-                        летнему сезону я заказала себе доску в SurfBoard.
-                        Дизайнер команды - волшебница! Она учла все мои
-                        предпочтения и комментарии. В итоге получился прекрасный
-                        дизайн. А я катаюсь на доске, которая мне нравится)
-                      </p>
-                    </div>
-                    <div class="reviews__autor">Ольга Макарова</div>
-                  </article>
-                </div>
+                <ul class="reviews__list">
+                  <li class="reviews__item active">
+                    <div class="reviews__display-inner">
+                     <div class="reviews__avatar">
+                      <img
+                        src="img/woman.png"
+                        alt=""
+                        class="reviews__avatar-img"
+                        />
+                     </div>
+                     <article class="reviews__content">
+                      <div class="reviews__title">Лучший дизайн</div>
+                      <div class="reviews__txt">
+                        <p>
+                          Я увидела доски на сайте и влюбилась в их дизайн. К
+                          летнему сезону я заказала себе доску в SurfBoard.
+                          Дизайнер команды - волшебница! Она учла все мои
+                          предпочтения и комментарии. В итоге получился прекрасный
+                          дизайн. А я катаюсь на доске, которая мне нравится)
+                        </p>
+                      </div>
+                      <div class="reviews__autor">Ольга Макарова</div>
+                     </article>
+                     </div>
+                  </li>
+                  <li class="reviews__item ">
+                    <div class="reviews__display-inner">
+                       <div class="reviews__avatar">
+                        <img
+                        src="img/man.png"
+                        alt=""
+                        class="reviews__avatar-img"
+                        />
+                       </div>
+                       <article class="reviews__content">
+                       <div class="reviews__title">Нереальная скорость</div>
+                       <div class="reviews__txt">
+                       <p>
+                       Я занимаюсь профессиональным спортом. Доверил изготовление доски
+                       для соревнований ребятам из Surfboard и не пожалел: 1 место на 
+                       соревнованиях. 
+                       Нереальная скорость, устойчивая, удобная и легкая: 
+                       всё что нужно для победы 
+                       на соревнованиях!
+                       </p>
+                       </div>
+                       <div class="reviews__autor">Марк Брюлов</div>
+                      </article>
+                   </div>
+                 </li>
+          <li class="reviews__item ">
+            <div class="reviews__display-inner">
+            <div class="reviews__avatar">
+              <img
+                src="img/man2.png"
+                alt=""
+                class="reviews__avatar-img"
+                />
+            </div>
+            <article class="reviews__content">
+              <div class="reviews__title">Устойчивость и безопасность</div>
+              <div class="reviews__txt">
+                <p>
+                  Я заказывал доски для своих детей. Мне было важно, чтобы они были устойчивые,
+                   так как безопасность детей на первом месте. Доски были изготовлены по 
+                   индивидуальным замерам с учетом роста и веса каждого ребенка. 
+                   Теперь дети катаются и им нравится!
+                </p>
               </div>
+              <div class="reviews__autor">Василий Поперечный
+              </div>
+            </article>
+          </div>
+        </div>
+      </li>
+    </ul>
+                
               <ul class="reviews__switcher">
                 <li
                   class="reviews__switcher-item interactive-avatar
@@ -653,47 +705,48 @@
                   </a>
                 </li>
               </ul>
+            </div> 
             </div>
           </div>
         </section>
         <section class="section order-section section-overlay">
           <div class="container">
             <h2 class="section__title section__title-form">закажите доску</h2>
-            <form class="form">
-              <input type="hidden" name="to" value="">
+            <form class="form" autocomplete="off">
+              <input type="hidden" name="to" value="vesna782006@yandex.ru">
               <div class="form__col">
                 <div class="form__row">
                   <label class="form__block">
                     <div class="form__title">Имя</div>
-                    <input type="text" name="name" class="form__imput" />
+                    <input type="text" name="name" class="form__input" />
                   </label>
                   <label class="form__block">
                     <div class="form__title">Телефон</div>
-                    <input type="text" name="phone" class="form__imput" />
+                    <input type="text" name="phone" class="form__input" />
                   </label>
                 </div>
                 <div class="form__row">
                   <label class="form__block">
                     <div class="form__title">Улица</div>
-                    <input type="text" name="street" class="form__imput" />
+                    <input type="text" name="street" class="form__input" />
                   </label>
                 </div>
                 <div class="form__row">
                   <label class="form__block">
                     <div class="form__title">Дом</div>
-                    <input type="text" name="home" class="form__imput" />
+                    <input type="text" name="home" class="form__input" />
                   </label>
                   <label class="form__block">
                     <div class="form__title">Корпус</div>
-                    <input type="text" name="part" class="form__imput" />
+                    <input type="text" name="part" class="form__input" />
                   </label>
                   <label class="form__block">
                     <div class="form__title">Квартира</div>
-                    <input type="text" name="appartament" class="form__imput" />
+                    <input type="text" name="appartament" class="form__input" />
                   </label>
                   <label class="form__block">
                     <div class="form__title">Этаж</div>
-                    <input type="text" name="floor" class="form__imput" />
+                    <input type="text" name="floor" class="form__input" />
                   </label>
                 </div>
               </div>
@@ -704,7 +757,7 @@
                     <div class="form__title">Комментарий</div>
                     <textarea
                       name="comment"
-                      class="form__imput form__imput--textarea"></textarea>
+                      class="form__input form__input--textarea"></textarea>
                   </label>
                 </div>
 
@@ -753,23 +806,23 @@
                   </button>
                 </div>
               </div>
-            </form>
+        </form>
+    </div>
+   
+      </section>
+      <div id="modal" class="modal">
+        <div class="modal__container">
+          <div class="modal__content">
+            Сообщение отправлено
           </div>
-
-       
-        <div id="modal" class="modal">
-          <div class="modal__container">
-            <div class="modal__content">
-              Сообщение отправлено
-            </div>
-            <div class="modal__button-container">
-              <a href="#" class="btn app-close-modal btn--theme--green">Закрыть</a>
-            </div>
+          <div class="modal__button-container">
+            <a href="#" class="btn app-close-modal btn--threme--yellow">Закрыть</a>
           </div>
         </div>
-      </section>
+      </div>
         <section class="section map-section">
           <div class="container"></div>
+
         </section>
 
         <footer class="footer">
@@ -852,16 +905,11 @@
         </li>
       </ul>
     </nav>
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    referrerpolicy="no-referrer"></script>
+   
     
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-   
-    <script src="./js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="./js/script.js"></script>
   </body>
 </html>
