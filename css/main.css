@@ -830,6 +830,15 @@ p {
   transform: translateY(-50%);
 }
 
+.products-slider {
+  position: relative;
+}
+.products-slider .bx-wrapper {
+  box-shadow: none;
+  border: 0;
+  background: transparent;
+}
+
 .products-slider__arrows {
   display: flex;
   flex-direction: column;
@@ -1132,3 +1141,5 @@ p {
   font-weight: bolder;
   margin-bottom: 0.2222222222rem;
 }
+
+@i;
