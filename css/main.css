@@ -481,32 +481,37 @@ p {
   color: #292929;
 }
 
-.reviews__switcher {
+.reviews-switcher {
   display: flex;
   justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
-.interactive-avatar {
+.reviews-switcher__item {
   width: 4.1111111111rem;
   height: 4.1111111111rem;
   border: 0.3333333333rem solid transparent;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  display: inline-flex;
+  cursor: pointer;
 }
-.interactive-avatar--active {
+.reviews-switcher__item.active {
+  border-color: #fedb3f;
+}
+.reviews-switcher__item:hover {
   border-color: #fedb3f;
 }
 
-.interactive-avatar__img {
+.reviews-switcher__item-img {
   display: block;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-.interactive-avatar__link {
+.reviews-switcher__link {
   position: absolute;
   top: 0;
   left: 0;
