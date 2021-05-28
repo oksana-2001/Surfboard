@@ -178,3 +178,117 @@ $(".reviews-switcher__link").click(e => {
 	itemToShow.addClass("active").siblings().removeClass("active");
 	curItem.addClass("active").siblings().removeClass("active");
 });
+
+
+let myMap;
+
+const init = () => {
+	myMap = new ymaps.Map("map", {
+		center: [55.76, 37.64],
+		zoom: 10,
+		controls: []
+	});
+
+	const coords = [
+		[55.752004, 37.576133],
+        [55.758640, 37.658958],
+        [55.612111, 37.611895],
+   
+	];
+
+		const myCollection = new ymaps.GeoObjectCollection({}, {
+			draggable: false,
+			iconLayout: 'default#image',
+			iconImageHref: './img/label.svg',
+			iconImageSize: [46, 57],
+			iconImageOffset: [-35, -52]
+		});
+
+		coords.forEach(coord => {
+			myCollection.add(new ymaps.Placemark(coord));
+		  })
+
+	myMap.geoObjects.add(myCollection);
+	myMap.behaviors.disable('scrollZoom');
+
+}
+
+ymaps.ready(init);
+
+
+const sections = $("section");
+const display = $(".maincontent");
+
+let inScroll = false;
+
+sections.first().addClass("active");
+
+const performTransition = (sectionEq) => {
+	if (inScroll === false) {
+		inScroll = true;
+        const position = sectionEq * -100;
+
+	display.css({
+		transform: `translateY(${position}%)`
+	});
+
+		sections.eq(sectionEq).addClass("active").siblings().removeClass("active");
+		setTimeout(() => {
+			inScroll = false;
+
+		}, 1300);
+		
+	}
+};
+
+const scrollViewport = (direction) => {
+	const activeSection = sections.filter(".active");
+	const nextSection = activeSection.next();
+	const prevSection = activeSection.prev();
+
+	if (direction === "next" && nextSection.length) {
+		performTransition(nextSection.index())
+	}
+
+	if (direction === "prev" && prevSection.length) {
+		performTransition(prevSection.index())
+	}
+}
+
+$(window).on("wheel", (e) => {
+	const deltaY = e.originalEvent.deltaY;
+   
+	
+	if (deltaY > 0) {
+		scrollViewport("next");
+	}
+
+	if (deltaY < 0) {
+		scrollViewport("prev");
+	}
+});
+
+$(window).on("keydown", e => {
+	const tagName = e.target.tagName.toLowerCase();
+
+	if (tagName != "input" && tagName != "textarea") {
+		switch (e.keyCode) {
+			case 38:
+				scrollViewport("prev");
+				break;
+			case 40:
+				scrollViewport("next");
+				break;
+		}
+	}
+});
+
+$("[data-scroll-to]").click(e => {
+	e.preventDefault();
+	
+	const $this = $(e.currentTarget);
+	const target = $this.attr("data-scroll-to");
+	const reqSection = $(`[data-section-id=${target}]`);
+
+	performTransition(reqSection.index());
+})
