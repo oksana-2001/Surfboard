@@ -687,7 +687,7 @@ p {
   margin-bottom: 0.2777777778rem;
 }
 .fixed-menu__item--active .fixed-menu__link {
-  border-color: #fff;
+  border-color: currentColor;
 }
 
 .fixed-menu__link {
@@ -704,21 +704,18 @@ p {
   width: 0.5555555556rem;
   height: 0.5555555556rem;
   border-radius: 50%;
-  background: #fff;
+  background: currentColor;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .fixed-menu__link:hover {
-  border-color: #fff;
+  border-color: currentColor;
 }
 
 .fixed-menu--shadowed {
   color: black;
-}
-.fixed-menu--shadowed .fixed-menu__link {
-  border-color: black;
 }
 
 .menu {

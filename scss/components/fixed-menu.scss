@@ -16,7 +16,7 @@
 
   &--active {
     .fixed-menu__link {
-      border-color: #fff;
+      border-color:currentColor;
     }
     
   }
@@ -35,7 +35,7 @@
     width: rem(10px);
     height: rem(10px);
     border-radius: 50%;
-    background: #fff;
+    background:currentColor;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -43,15 +43,10 @@
 
   }
   &:hover{
-    border-color: #fff;
+    border-color:currentColor;
   }
 }
 
 .fixed-menu--shadowed{
   color: black;
-  .fixed-menu__link{  
-    border-color: black;
-    
   }
-  
-}

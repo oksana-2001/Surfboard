@@ -226,18 +226,34 @@ sections.first().addClass("active");
 const performTransition = (sectionEq) => {
 	if (inScroll === false) {
 		inScroll = true;
-        const position = sectionEq * -100;
+		const position = sectionEq * -100;
+		
+		const currentSection = section.eq(sectionEq);
+			const menuTheme = currentSection.attr("data-sidemenu-theme");
+			const sideMenu = $(".fixed-menu");
 
-	display.css({
-		transform: `translateY(${position}%)`
-	});
+			if (menuTheme === "black") {
+				sideMenu.addClass("fixed-menu--shadowed");
+			} else {
+				sideMenu.removeClass("fixed-menu--shadowed");
+		}
 
-		sections.eq(sectionEq).addClass("active").siblings().removeClass("active");
+		display.css({
+			transform: `translateY(${position}%)`,
+		});
+	
+		sections.eq(sectionEq).addClass("active").siblings().removeClass("active");	
+		
 		setTimeout(() => {
 			inScroll = false;
 
+			sideMenu
+			.find(".fixed-menu__item")
+			.eq(sectionEq)
+			.addClass("fixed-menu__item--active")
+			.siblings()
+			.removeClass("fixed-menu__item--active");
 		}, 1300);
-		
 	}
 };
 
@@ -284,11 +300,11 @@ $(window).on("keydown", e => {
 });
 
 $("[data-scroll-to]").click(e => {
-	e.preventDefault();
+ e.preventDefault();
 	
-	const $this = $(e.currentTarget);
-	const target = $this.attr("data-scroll-to");
-	const reqSection = $(`[data-section-id=${target}]`);
+ const $this = $(e.currentTarget);
+ const target = $this.attr("data-scroll-to");
+ const reqSection = $(`[data-section-id=${target}]`);
 
-	performTransition(reqSection.index());
-})
+ performTransition(reqSection.index());
+});
