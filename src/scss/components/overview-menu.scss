@@ -12,10 +12,23 @@
 	color: #FFFFFF;
 	font-size: rem(48px);
 	font-weight: 700;
-
+	position: absolut;
 	
 	
+}
 
+.overview-menu{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	list-style: none;
+	display: flex;
+	
+	
 
 }
 
+.overview-menu__content-text{
+	display: none;
+}

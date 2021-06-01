@@ -88,7 +88,7 @@ p {
   background: url("./../img/ocean.png") top center no-repeat;
   color: #fff;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   min-height: 36.4444444444rem;
 }
 
@@ -262,7 +262,7 @@ p {
 }
 
 .section {
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -280,7 +280,7 @@ p {
   margin-top: 3.3333333333rem;
   color: #ffffff;
   background-size: cover;
-  background-size-font-size: 2.2222222222rem;
+font-size: 2.2222222222rem;
 }
 
 .section-overlay {
@@ -883,6 +883,13 @@ p {
 .products-slider {
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .products-slider {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .products-slider .bx-wrapper {
   box-shadow: none;
   border: 0;
@@ -949,7 +956,7 @@ p {
   display: flex;
 }
 
-.product__col-image {
+.product__col_image {
   background-image: url("./../img/background.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -1248,4 +1255,18 @@ p {
   color: #FFFFFF;
   font-size: 2.6666666667rem;
   font-weight: 700;
+  position: absolut;
+}
+
+.overview-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  list-style: none;
+  display: flex;
+}
+
+.overview-menu__content-text {
+  display: none;
 }

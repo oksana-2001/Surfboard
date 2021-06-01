@@ -1,0 +1,16 @@
+$containerWidht: 940px;
+$baseFontSize: 18px;
+
+$z-fixed-menu: 100;
+
+$tablets: 768px;
+$phones: 480px;
+
+@import "media";
+
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&display=swap");
+@import "layout";
+
+@import "components/*.scss";

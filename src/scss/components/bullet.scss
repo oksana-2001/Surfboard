@@ -1,0 +1,16 @@
+.bullet {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.bullet__icon {
+  width: rem(34px);
+  height: rem(34px);
+  margin-right: rem(15px);
+}
+
+.bullet__txt {
+  font-size: rem(16px);
+  max-width: rem(90px);
+}
