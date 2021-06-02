@@ -9,14 +9,19 @@ const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
 const px2rem = require('gulp-smile-px2rem');
 const gcmq = require('gulp-group-css-media-queries');
-
+const cleanCSS = require('gulp-clean-css');
+const sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
 
 sass.compiler = require('node-sass');
 
-const foundationStyle = [
-  'node_modules/normalize.css/normalize.css',
-  'src/scss/main.scss'
-];
+function clean() {
+  return gulp.src('./dist/**/*', { read: false })
+    .pipe(rm())
+}
+
+exports.clean = clean;
 
 function copy() {
   return src('src/*.html')
@@ -27,15 +32,21 @@ function copy() {
 
 exports.copy = copy;
 
-function clean() {
-  return gulp.src('./dist/**/*', { read: false })
-    .pipe(rm())
-}
+function html() {
+  return src('src/*.html').pipe(dest('dist'))
+    .pipe(reload({ stream: true }));
+};
 
-exports.clean = clean;
+exports.html = html;
+
+const foundationStyle = [
+  'node_modules/normalize.css/normalize.css',
+  'src/scss/main.scss'
+];
 
 function styles() {
   return src(foundationStyle)
+    .pipe(sourcemaps.init())
     .pipe(concat('main.scss'))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
@@ -46,28 +57,33 @@ function styles() {
       cascade: false
     })
   )
-  .pipe(gcmq())
+    // .pipe(gcmq())
+    .pipe(cleanCSS())
+    .pipe(sourcemaps.write())
     .pipe(dest('dist/css'))
-    .pipe(reload({ stream: true }));
+    // .pipe(reload({ stream: true }));
 };
 
 exports.styles = styles;
 
 
 function scripts() {
-  return src('src/js/**/*.js').pipe(dest('dist/js'))
-  .pipe(reload({ stream: true }));
-}
+  return src('src/scripts/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(concat('main.js', { newLine: ';' }))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(dest('dist'))
+    .pipe(reload({ stream: true }));
+};
 
 exports.scripts = scripts;
 
 
-function html() {
-  return src('src/*.html').pipe(dest('dist'))
-    .pipe(reload({ stream: true }));
-};
 
-exports.html = html;
 
 function server(done) {
   browserSync.init({
@@ -85,7 +101,7 @@ exports.server = server;
 
 function watcher() {
   gulp.watch("src/scss/**/*.scss", series(styles));
-  gulp.watch("src/js/script.js", series(scripts));
+  gulp.watch('./src/scripts/*.js', series('scripts'));
   gulp.watch("src/*.html", series(html));
 };
 
