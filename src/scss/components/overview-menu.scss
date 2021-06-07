@@ -9,42 +9,77 @@
 	& &__title{
 		color: #FFFFFF;
 		position: absolute;
+		top: 10%;
+		left: 10%;
 		
 
 	}
-	&__list{
+
+	
+
+	&__container{
+		height: 100%;
+	}
+
+}
+
+	.overview-menu{
 		position: absolute;
 		top: 0;
 		right: 0;
+		bottom: 0;
+	    display: flex;
 		
-		height: 100%;
-		display: flex;
 		
-	}
-	&__item{
-		display: flex;
-		height: 100%;
-	}
-	&__trigger{
-		height: 100%;
-		width: rem(102px);
-		background-size: cover;
-		background-position: 50%;
-		background-repeat: no-repeat;
-		&-longbord{
-			background-image: url("./../img/longbord.png");
+
+		.overview-menu__item{
+			display: flex;
+			height: 100%;
 			
-		}
-		&-shortbord{
-			background-image: url("./../img/shortbord.png");
-			
-		}
-		&-softtop{
-			background-image: url("./../img/softtop.png");
-			
+		&-active{
+			.overview-menu__content-wrap{
+              width: rem(550px);
+			  color: #FFFFFF;
+			}
 		}
 		
+		&__image{
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
 	}
+		
+
+		&__trigger{
+			height: 100%;
+			width: rem(102px);
+			background-size: cover;
+			background-position: 50%;
+			background-repeat: no-repeat;
+			
+			
+			
+			&-longbord{
+				background-image: url("./../img/longbord.png");
+			   
+			}
+			&-shortbord{
+				background-image: url("./../img/shortbord.png");
+				
+				
+			}
+			 &-softtop{
+				 background-image: url("./../img/softtop.png");
+			 }
+			&-text{
+				text-decoration: none;
+			}
+		}
+	
+	
+	
+
 	&__content-wrap{
 		width: 0;
 		overflow: hidden;
