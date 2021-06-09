@@ -1,3 +1,4 @@
+
 function menuHamburger() {
 	const buttonOpen = document.querySelector(".hamburger");
 	const buttonClose = document.querySelector(".menu__close");
@@ -332,7 +333,7 @@ $(window).on("keydown", e => {
 
 $(".wrapper").on("touchmove", e => e.preventDefault());
 
-$("[data-scroll-to]").click(e => {
+$("[data-scroll-to]").click (e => {
  e.preventDefault();
 	
  const $this = $(e.currentTarget);
@@ -344,3 +345,52 @@ $("[data-scroll-to]").click(e => {
 
 
 
+const verticalAcco3 = () => {
+	const links = document.querySelectorAll(".overview-menu__trigger");
+	const body = document.querySelector('body');
+	const calculateWidth = () => {
+		const windowWidth = window.innerWidth;
+		
+		const MAX_WIDTH = 524;
+
+		const linksWidth = links[0].offsetWidth;
+
+		const reqWidth = windowWidth - (linksWidth * links.length);
+
+		return reqWidth > MAX_WIDTH ? MAX_WIDTH : reqWidth;
+	};
+	
+	function closeItem(activeElement) {
+		const activeText = activeElement.querySelector(".overview-menu__content");
+		activeText.style.width = "0px";
+		activeElement.classList.remove("active");
+	}
+
+	links.forEach(function (elem) {
+		elem.addEventListener("click", function (e) {
+			e.preventDefault();
+			const link = e.target.closest(".overview-menu__trigger");
+			const active = document.querySelector(".overview-menu__item.active");
+			console.log(active)
+			if (active) {
+				closeItem(active);
+			}
+
+			if (!active || active.querySelector(".overview-menu__trigger") !== link) {
+				const current = link.closest(".overview-menu__item");
+				current.classList.add("active");
+				const currentText = current.querySelector(".overview-menu__content");
+				if (body.offsetWidth > 480) {
+					currentText.style.width = calculateWidth() + 'px';
+
+					widthEl = calculateWidth();
+
+				} else {
+					currentText.style.width = '100%';
+				}
+			}
+
+		});
+	});
+}
+verticalAcco3();
