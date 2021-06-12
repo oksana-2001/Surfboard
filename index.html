@@ -40,7 +40,7 @@
                     <a href="#" data-scroll-to="reviews" class="menu__link">Отзывы</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" data-scroll-to="contacts" class="menu__link">Как мы работаем</a>
+                    <a href="#" data-scroll-to="player-section" class="menu__link">Как мы работаем</a>
                   </li>
                   <li class="menu__item">
                     <a href="#" data-scroll-to="contacts" class="menu__link">Контакты</a>
@@ -658,6 +658,7 @@
               </ul>
            </div>
         </section>
+        
         <section data-sidemenu-theme="black" data-section-id="reviews"  class="section">
           <div class="container">
             <h2 class="section__title">отзывы</h2>
@@ -773,6 +774,29 @@
               </ul>
             </div>
             </div>
+        </section>
+        <section data-sidemenu-theme="black" data-section-id="player-section" class="section player-section">
+          <div class="container">
+            <h2 class="section__title">Как мы работаем</h2>
+            <div class="player-section__container">
+              <div class="player">
+                <div class="player__wrapper">
+                  <div id="yt-player" class="player__elem"></div>
+                  <div class="player__splash"></div>
+                </div>
+                <div class="player__controls">
+                  <button class="player__start"></button>
+                  <div class="player__playback">
+                    <button class="player__playback-button"></button>
+                  </div>
+                  <div class="player__duration">
+                    <span class="player__duration-completed">0:00</span> :
+                    <span class="player__duration-estimate">0:00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
         </section>
         <section data-sidemenu-theme="white" data-section-id="order" class="section order-section section-overlay">
           <div class="container">
@@ -957,6 +981,9 @@
           <a href="" data-scroll-to="reviews" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
+          <a href="" data-scroll-to="player-section" class="fixed-menu__link"></a>
+        </li>
+        <li class="fixed-menu__item">
           <a href="" data-scroll-to="order" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
@@ -970,6 +997,7 @@
   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="./js/script.js"></script>
   </body>
 </html>
